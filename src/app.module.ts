@@ -5,7 +5,7 @@ import { ArticlesModule } from './articles/articles.module';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://blog-daniel:0b0lDdm3TQpDQsGb@cluster0.pnkor.mongodb.net/test',
+      'mongodb+srv://blog-daniel:ftDIzPGzC3oszKtE@cluster0.pnkor.mongodb.net/test',
     ),
     ArticlesModule,
   ],
