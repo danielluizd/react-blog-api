@@ -22,7 +22,7 @@ export class ArticlesController {
 
   @Get()
   findAll() {
-    return this.articlesService.findAll();
+    return { title: 'Samuel Renan', content: 'Daniel Luiz' }; //this.articlesService.findAll();
   }
 
   @Get(':id')
