@@ -23,17 +23,6 @@ export class ArticlesController {
 
   @Get()
   findAll() {
-    // return [
-    //   { title: 'Filtro', content: 'Carro Carro Carro Carro Carro Carro Carro' },
-    //   {
-    //     title: 'Teste ',
-    //     content: 'Prédio Prédio Prédio Prédio Prédio Prédio Prédio',
-    //   },
-    //   {
-    //     title: 'Gravata',
-    //     content: 'Azul Azul Azul Azul Azul Azul Azul Azul Azul',
-    //   },
-    // ];
     return this.articlesService.findAll();
   }
 
@@ -42,10 +31,10 @@ export class ArticlesController {
     return this.articlesService.findOne(id);
   }
 
-  // @Patch(':id')
-  // update(@Param('id') id: string, @Body() updateArticleDto: UpdateArticleDto) {
-  //   return this.articlesService.update(+id, updateArticleDto);
-  // }
+  @Patch(':id')
+  update(@Param('id') id: string, @Body() updateArticleDto: UpdateArticleDto) {
+    return this.articlesService.update(id, updateArticleDto);
+  }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
