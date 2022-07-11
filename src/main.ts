@@ -4,9 +4,13 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   // app.enableCors();
-  await app.listen(process.env.PORT || 3000);
 
-  var whitelist = ['http://localhost:3000', 'https://localhost:3000'];
+  var whitelist = [
+    'http://localhost:3000',
+    'https://localhost:3000',
+    'https://www.localhost:3000',
+    'http://www.localhost:3000',
+  ];
   app.enableCors({
     origin: function (origin, callback) {
       if (whitelist.indexOf(origin) !== -1) {
@@ -23,5 +27,6 @@ async function bootstrap() {
     credentials: true,
   });
   // await app.listen(3000);
+  await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
