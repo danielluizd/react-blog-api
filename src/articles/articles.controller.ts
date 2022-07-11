@@ -23,9 +23,15 @@ export class ArticlesController {
   @Get()
   findAll() {
     return [
-      { title: 'Samuel Renan', content: 'Daniel Luiz' },
-      { title: 'Teste ', content: 'Prédio' },
-      { title: 'Gravata', content: 'Azul' },
+      { title: 'Filtro', content: 'Carro Carro Carro Carro Carro Carro Carro' },
+      {
+        title: 'Teste ',
+        content: 'Prédio Prédio Prédio Prédio Prédio Prédio Prédio',
+      },
+      {
+        title: 'Gravata',
+        content: 'Azul Azul Azul Azul Azul Azul Azul Azul Azul',
+      },
     ]; //this.articlesService.findAll();
   }
 
