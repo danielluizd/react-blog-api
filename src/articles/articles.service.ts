@@ -13,7 +13,7 @@ export class ArticlesService {
   ) {}
 
   create(createArticleDto: CreateArticleDto) {
-    const article = new this.articleModel(CreateArticleDto);
+    const article = new this.articleModel(createArticleDto);
     return article.save();
   }
 
