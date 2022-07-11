@@ -3,12 +3,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  app.enableCors({
-    origin: [
-      'https://react-blog-danielluizd.vercel.app',
-      'http://react-blog-danielluizd.vercel.app',
-    ],
-  });
+  app.enableCors();
   // var whitelist = [
   //   'https://react-blog-danielluizd.vercel.app',
   //   'http://react-blog-danielluizd.vercel.app',
