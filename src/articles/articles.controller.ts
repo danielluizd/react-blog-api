@@ -17,22 +17,24 @@ export class ArticlesController {
 
   @Post()
   create(@Body() createArticleDto: CreateArticleDto) {
+    console.log('PASSEI AQUI', createArticleDto);
     return this.articlesService.create(createArticleDto);
   }
 
   @Get()
   findAll() {
-    return [
-      { title: 'Filtro', content: 'Carro Carro Carro Carro Carro Carro Carro' },
-      {
-        title: 'Teste ',
-        content: 'Prédio Prédio Prédio Prédio Prédio Prédio Prédio',
-      },
-      {
-        title: 'Gravata',
-        content: 'Azul Azul Azul Azul Azul Azul Azul Azul Azul',
-      },
-    ]; //this.articlesService.findAll();
+    // return [
+    //   { title: 'Filtro', content: 'Carro Carro Carro Carro Carro Carro Carro' },
+    //   {
+    //     title: 'Teste ',
+    //     content: 'Prédio Prédio Prédio Prédio Prédio Prédio Prédio',
+    //   },
+    //   {
+    //     title: 'Gravata',
+    //     content: 'Azul Azul Azul Azul Azul Azul Azul Azul Azul',
+    //   },
+    // ];
+    return this.articlesService.findAll();
   }
 
   @Get(':id')
