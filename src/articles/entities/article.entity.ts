@@ -8,7 +8,7 @@ export class Article {
   title: string;
 
   @Prop()
-  content: number;
+  content: string;
 }
 
 export const ArticleSchema = SchemaFactory.createForClass(Article);
