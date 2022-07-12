@@ -17,7 +17,6 @@ export class ArticlesController {
 
   @Post()
   create(@Body() createArticleDto: CreateArticleDto) {
-    console.log('PASSEI AQUI', createArticleDto);
     return this.articlesService.create(createArticleDto);
   }
 
